@@ -19,11 +19,11 @@
                 <div class="weather-search">
                     <input type="text" id="location" name="user_location" placeholder="Search location here" />
                     <div class="weather-search-image">
-                        <img src="search.svg" />
+                        <img src="search.svg" id="updateLocation" />
                     </div>
                 </div>
                 <div class="weather-change-degrees">
-                    Fº
+                    ºC
                 </div>
             </div>
             <hr />
@@ -31,58 +31,152 @@
                 <div class="weather-today-caption">Today overview</div>
                 <div class="weather-today-row">
                     <div class="weather-today-box">
-                        <div class="weather-today-box-image"></div>
+                        <div class="weather-today-box-image"><img src="thermo-max.svg" /></div>
                         <div class="weather-today-box-description">
-                            <div class="weather-today-box-caption">Wind Speed</div>
-                            <div class="weather-today-box-value">12km/h</div>
+                            <div class="weather-today-box-caption">Maximum temperature</div>
+                            <div class="weather-today-box-value" data-type="max-temp">31º C</div>
                         </div>
                     </div>
                     <div class="weather-today-box">
-                        <div class="weather-today-box-image"></div>
+                        <div class="weather-today-box-image"><img src="thermo.min.svg" /></div>
                         <div class="weather-today-box-description">
-                            <div class="weather-today-box-caption">Rain chance</div>
-                            <div class="weather-today-box-value">24%</div>
+                            <div class="weather-today-box-caption">Minimum temperature</div>
+                            <div class="weather-today-box-value" data-type="min-temp">11º C</div>
                         </div>
                     </div>
                 </div>
                 <div class="weather-today-row">
                     <div class="weather-today-box">
-                        <div class="weather-today-box-image"></div>
+                        <div class="weather-today-box-image"><img src="wind.svg" /></div>
                         <div class="weather-today-box-description">
-                            <div class="weather-today-box-caption">Pressure</div>
-                            <div class="weather-today-box-value">720hpa</div>
+                            <div class="weather-today-box-caption">Wind Speed</div>
+                            <div class="weather-today-box-value" data-type="wind-spd">12km/h</div>
                         </div>
                     </div>
                     <div class="weather-today-box">
-                        <div class="weather-today-box-image"></div>
+                        <div class="weather-today-box-image"><img src="avg-temp.svg" /></div>
+                        <div class="weather-today-box-description">
+                            <div class="weather-today-box-caption">Average Temperature</div>
+                            <div class="weather-today-box-value" data-type="avg-temp">21º C</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-today-row">
+                    <div class="weather-today-box">
+                        <div class="weather-today-box-image"><img src="foggy.svg" /></div>
+                        <div class="weather-today-box-description">
+                            <div class="weather-today-box-caption">Humidity</div>
+                            <div class="weather-today-box-value" data-type="humidity">36%</div>
+                        </div>
+                    </div>
+                    <div class="weather-today-box">
+                        <div class="weather-today-box-image"><img src="rainy.svg" /></div>
+                        <div class="weather-today-box-description">
+                            <div class="weather-today-box-caption">Chance of rain</div>
+                            <div class="weather-today-box-value" data-type="chance-rain">24%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-today-row">
+                    <div class="weather-today-box">
+                        <div class="weather-today-box-image"><img src="pressure.svg" /></div>
+                        <div class="weather-today-box-description">
+                            <div class="weather-today-box-caption">Pressure</div>
+                            <div class="weather-today-box-value" data-type="pressure">720hpa</div>
+                        </div>
+                    </div>
+                    <div class="weather-today-box">
+                        <div class="weather-today-box-image"><img src="sunny.svg" /></div>
                         <div class="weather-today-box-description">
                             <div class="weather-today-box-caption">Uv index</div>
-                            <div class="weather-today-box-value">2,3</div>
+                            <div class="weather-today-box-value" data-type="uv">2,3</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="weather-next-days">
                 <div class="weather-next-caption">Forecast</div>
-                <div class="weather-next-box">
-                    <div class="weather-next-box-caption">Today</div>
-                    <div class="weather-next-box-content">
-                        <div class="weather-next-box-image"></div>
-                        <div class="weather-next-box-weather">Sunny</div>
+                <div class="weather-next-box-container">
+                    <div class="weather-next-box">
+                        <div class="weather-next-box-caption">Today</div>
+                        <div class="weather-next-box-content">
+                            <div class="weather-next-box-content-box weather-next-box-image"></div>
+                            <div class="weather-next-box-content-box weather-next-box-weather">Sunny</div>
+                            <div class="weather-next-box-content-box weather-next-box-avg-temp">
+                                <div class="weather-next-box-avg-temp-label">Average</div>
+                                <div class="weather-next-box-avg-temp-value">30º C</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-min-temp">
+                                <div class="weather-next-box-min-temp-label">Min</div>
+                                <div class="weather-next-box-min-temp-value">30º C</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-max-temp">
+                                <div class="weather-next-box-max-temp-label">Max</div>
+                                <div class="weather-next-box-max-temp-value">30º C</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-humidity">
+                                <div class="weather-next-box-humidity-label">Humidity</div>
+                                <div class="weather-next-box-humidity-value">30%</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-rain">
+                                <div class="weather-next-box-rain-label">Rain</div>
+                                <div class="weather-next-box-rain-value">30%</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="weather-next-box">
-                    <div class="weather-next-box-caption">Tomorrow</div>
-                    <div class="weather-next-box-content">
-                        <div class="weather-next-box-image"></div>
-                        <div class="weather-next-box-weather">Sunny</div>
+                    <div class="weather-next-box">
+                        <div class="weather-next-box-caption">Tomorrow</div>
+                        <div class="weather-next-box-content">
+                            <div class="weather-next-box-content-box weather-next-box-image"></div>
+                            <div class="weather-next-box-content-box weather-next-box-weather">Sunny</div>
+                            <div class="weather-next-box-content-box weather-next-box-avg-temp">
+                                <div class="weather-next-box-avg-temp-label">Average</div>
+                                <div class="weather-next-box-avg-temp-value">30º C</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-min-temp">
+                                <div class="weather-next-box-min-temp-label">Min</div>
+                                <div class="weather-next-box-min-temp-value">30º C</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-max-temp">
+                                <div class="weather-next-box-max-temp-label">Max</div>
+                                <div class="weather-next-box-max-temp-value">30º C</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-humidity">
+                                <div class="weather-next-box-humidity-label">Humidity</div>
+                                <div class="weather-next-box-humidity-value">30%</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-rain">
+                                <div class="weather-next-box-rain-label">Rain</div>
+                                <div class="weather-next-box-rain-value">30%</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="weather-next-box">
-                    <div class="weather-next-box-caption">Day after tomorrow</div>
-                    <div class="weather-next-box-content">
-                        <div class="weather-next-box-image"></div>
-                        <div class="weather-next-box-weather">Sunny</div>
+                    <div class="weather-next-box">
+                        <div class="weather-next-box-caption">Day after tomorrow</div>
+                        <div class="weather-next-box-content">
+                            <div class="weather-next-box-content-box weather-next-box-image"></div>
+                            <div class="weather-next-box-content-box weather-next-box-weather">Sunny</div>
+                            <div class="weather-next-box-content-box weather-next-box-avg-temp">
+                                <div class="weather-next-box-avg-temp-label">Average</div>
+                                <div class="weather-next-box-avg-temp-value">30º C</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-min-temp">
+                                <div class="weather-next-box-min-temp-label">Min</div>
+                                <div class="weather-next-box-min-temp-value">30º C</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-max-temp">
+                                <div class="weather-next-box-max-temp-label">Max</div>
+                                <div class="weather-next-box-max-temp-value">30º C</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-humidity">
+                                <div class="weather-next-box-humidity-label">Humidity</div>
+                                <div class="weather-next-box-humidity-value">30%</div>
+                            </div>
+                            <div class="weather-next-box-content-box weather-next-box-rain">
+                                <div class="weather-next-box-rain-label">Rain</div>
+                                <div class="weather-next-box-rain-value">30%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
