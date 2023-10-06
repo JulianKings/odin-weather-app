@@ -1,6 +1,6 @@
 const fetchWeather = async (location) => {
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=c37bc118761049e5815115544230510&q=${location}&days=3&aqi=yes&alerts=yes`, {
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=c37bc118761049e5815115544230510&q=${location}&days=3&aqi=yes&alerts=yes`, {
             mode: 'cors',
             headers: {
                 'Access-Control-Allow-Origin': '*',
