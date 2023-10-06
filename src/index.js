@@ -1,4 +1,4 @@
 import './styles/style.css';
-import updateLayout from './scripts/layoutManager';
+import generateLayout from './scripts/layoutManager';
 
-updateLayout();
+generateLayout();
