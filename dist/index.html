@@ -9,14 +9,143 @@
 </head>
 <body>
     <div class="content">
-        <div class="header">
-            <div class="header-title">ToDo List</div>
-            <div class="menu-holder">
-                <div class="menu-image-holder"></div>
+        <div class="weather">
+            <div class="weather-header">
+                <div class="weather-title">
+                <div class="weather-title-main">October 2022</div>
+                <div class="weather-title-subtitle">Thursday, Jan 4, 2023</div>
+                </div>
+                <div class="weather-search">
+                    <input type="text" id="location" name="user_location" placeholder="Search location here" />
+                    <div class="weather-search-image">
+                        <img src="search.svg" />
+                    </div>
+                </div>
+                <div class="weather-change-degrees">
+                    Fº
+                </div>
             </div>
+            <hr />
+            <div class="weather-today">
+                <div class="weather-today-caption">Today overview</div>
+                <div class="weather-today-row">
+                    <div class="weather-today-box">
+                        <div class="weather-today-box-image"></div>
+                        <div class="weather-today-box-description">
+                            <div class="weather-today-box-caption">Wind Speed</div>
+                            <div class="weather-today-box-value">12km/h</div>
+                        </div>
+                    </div>
+                    <div class="weather-today-box">
+                        <div class="weather-today-box-image"></div>
+                        <div class="weather-today-box-description">
+                            <div class="weather-today-box-caption">Rain chance</div>
+                            <div class="weather-today-box-value">24%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-today-row">
+                    <div class="weather-today-box">
+                        <div class="weather-today-box-image"></div>
+                        <div class="weather-today-box-description">
+                            <div class="weather-today-box-caption">Pressure</div>
+                            <div class="weather-today-box-value">720hpa</div>
+                        </div>
+                    </div>
+                    <div class="weather-today-box">
+                        <div class="weather-today-box-image"></div>
+                        <div class="weather-today-box-description">
+                            <div class="weather-today-box-caption">Uv index</div>
+                            <div class="weather-today-box-value">2,3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-next-days">
+                <div class="weather-next-caption">Forecast</div>
+                <div class="weather-next-box">
+                    <div class="weather-next-box-caption">Today</div>
+                    <div class="weather-next-box-content">
+                        <div class="weather-next-box-image"></div>
+                        <div class="weather-next-box-weather">Sunny</div>
+                    </div>
+                </div>
+                <div class="weather-next-box">
+                    <div class="weather-next-box-caption">Tomorrow</div>
+                    <div class="weather-next-box-content">
+                        <div class="weather-next-box-image"></div>
+                        <div class="weather-next-box-weather">Sunny</div>
+                    </div>
+                </div>
+                <div class="weather-next-box">
+                    <div class="weather-next-box-caption">Day after tomorrow</div>
+                    <div class="weather-next-box-content">
+                        <div class="weather-next-box-image"></div>
+                        <div class="weather-next-box-weather">Sunny</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">Site made for the Odin Project</div>
         </div>
 
-        <div class="footer">Site made for the Odin Project</div>
+        <div class="weather-now">
+            <div class="weather-now-location">
+                <div class="weather-now-place">
+                    <div class="weather-now-place-city">Madrid</div>
+                    <div class="weather-now-place-country">Spain</div>
+                </div>
+                <div class="weather-now-hour">8:54 AM</div>
+            </div>
+            <div class="weather-now-info">
+                <div class="weather-now-info-image"></div>
+                <div class="weather-now-info-caption">
+                    <div class="weather-now-info-caption-degrees">20º C</div>
+                    <div class="weather-now-info-caption-info">Dramatic Cloudy</div>
+                </div>
+            </div>
+            <hr />
+            <div class="weather-now-extra">
+                <div class="weather-now-extra-caption">Hourly forecast</div>
+                <div class="weather-now-extra-box">
+                    <div class="weather-now-extra-box-hour">7pm</div>
+                    <div class="weather-now-extra-box-forecast">Sunny</div>
+                    <div class="weather-now-extra-box-image"></div>
+                </div>
+                <div class="weather-now-extra-box">
+                    <div class="weather-now-extra-box-hour">8pm</div>
+                    <div class="weather-now-extra-box-forecast">Sunny</div>
+                    <div class="weather-now-extra-box-image"></div>
+                </div>
+                <div class="weather-now-extra-box">
+                    <div class="weather-now-extra-box-hour">9pm</div>
+                    <div class="weather-now-extra-box-forecast">Sunny</div>
+                    <div class="weather-now-extra-box-image"></div>
+                </div>
+                <div class="weather-now-extra-box">
+                    <div class="weather-now-extra-box-hour">10pm</div>
+                    <div class="weather-now-extra-box-forecast">Sunny</div>
+                    <div class="weather-now-extra-box-image"></div>
+                </div>
+            </div>
+            <div class="weather-now-astro">
+                <div class="weather-now-astro-caption">Sunrise & Sunset</div>
+                <div class="weather-now-astro-sunrise">
+                    <div class="weather-now-astro-sunrise-info">
+                        <div class="weather-now-astro-sunrise-info-caption">Sunrise</div>
+                        <div class="weather-now-astro-sunrise-info-time">4:20 AM</div>
+                    </div>
+                    <div class="weather-now-astro-sunrise-until">4 hours ago</div>
+                </div>
+                <div class="weather-now-astro-sunset">
+                    <div class="weather-now-astro-sunset-info">
+                        <div class="weather-now-astro-sunset-info-caption">Sunset</div>
+                        <div class="weather-now-astro-sunset-info-time">5:50 PM</div>
+                    </div>
+                    <div class="weather-now-astro-sunset-until">in 9 hours</div>
+                </div>
+            </div>
+        </div>
     </div>    
 </body>
 </html>

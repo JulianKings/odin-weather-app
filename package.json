@@ -1,0 +1,28 @@
+{
+  "name": "odin-weather-app",
+  "version": "0.0.1",
+  "description": "Easy Weather App to practice API and Promises in JavaScript, made as an assignment for The Odin Project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "build": "webpack",
+    "publish_dist": "git subtree push --prefix dist origin gh-pages"
+  },
+  "keywords": [],
+  "author": "Julian",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "prettier": "3.0.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

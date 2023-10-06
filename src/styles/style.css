@@ -1,0 +1,287 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+}
+
+.content {
+    color: black;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+}
+
+.content .weather-now
+{
+    background: linear-gradient(#00132b,#002d80);
+    color: white;
+
+}
+
+.weather-now .weather-now-location
+{
+    display: grid;
+    grid-template-columns: 1fr 6rem;
+    padding: 1.5rem 1.4rem;
+    align-items: center;
+}
+
+.weather-now-place {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.weather-now-location .weather-now-hour, 
+.weather-now-info-caption .weather-now-info-caption-info
+{
+    text-align: right;
+}
+
+.weather-now-place .weather-now-place-city {
+    font-size: 1.4rem;
+}
+
+.weather-now-place .weather-now-place-country {
+    font-size: 0.9rem;
+    color: rgb(180, 182, 187);
+}
+
+.weather-now .weather-now-info
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-now-info .weather-now-info-caption
+{
+    display: grid;
+    grid-template-columns: 1fr 6rem;
+    padding: 0 1.4rem;
+    padding-bottom: 0.6rem;
+    align-items: center;
+}
+
+.weather-now-info .weather-now-info-image
+{
+    padding: 0 1.4rem;
+    margin: 0;
+}
+
+.weather-now-info-caption .weather-now-info-caption-degrees
+{
+    font-size: 2.4rem;
+}
+
+.weather-now-info-caption .weather-now-info-caption-info {
+    opacity: 0.9;
+}
+
+.weather-now hr {
+    margin: 0.3rem 1.4rem;
+    opacity: 0.1;
+}
+
+.weather-now .weather-now-extra
+{
+    padding: 0.8rem 1.4rem;
+    padding-top: 1.5rem;
+}
+
+.weather-now-extra .weather-now-extra-box
+{
+    display: grid;
+    grid-template-columns: 3.2rem 1fr 3.2rem;
+    font-size: 1rem;
+    padding: 0.3rem 0;
+}
+
+.weather-now-astro {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.8rem 1.4rem;
+}
+
+.weather-now-astro .weather-now-astro-sunrise, .weather-now-astro .weather-now-astro-sunset {
+    display: grid;
+    grid-template-columns: 1fr 6rem;
+    align-items: center;
+    background: linear-gradient(to right, #083270, #0742a7);
+    border-radius: 0.4rem;
+    padding: 1.1rem 1.1rem;
+}
+
+.weather-now-astro-sunset-info .weather-now-astro-sunset-info-caption,
+.weather-now-astro-sunrise-info .weather-now-astro-sunrise-info-caption
+{
+    font-size: 0.95rem;
+    opacity: 0.8;
+    padding-bottom: 0.4rem;
+}
+
+.weather-now-astro-sunset-info .weather-now-astro-sunset-info-time,
+.weather-now-astro-sunrise-info .weather-now-astro-sunrise-info-time
+{
+    font-size: 1.25rem;
+}
+
+.weather-now-astro-sunrise .weather-now-astro-sunrise-until,
+.weather-now-astro-sunset .weather-now-astro-sunset-until {
+    font-size: 0.8rem;
+    text-align: right;
+    opacity: 0.9;
+}
+
+.weather-now-astro .selected {
+    border: 1px solid #4c85f0;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+.weather .weather-header {
+    padding: 1.5rem 1.4rem;
+    display: grid;
+    grid-template-columns: 12rem 1fr 5rem;
+}
+
+.weather-title .weather-title-main
+{
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+.weather-title .weather-title-subtitle
+{
+    font-size: 0.9rem;
+}
+
+.weather-header .weather-search
+{
+    position: relative;
+    display: flex;
+}
+
+.weather-header .weather-search-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    opacity: 0.6;
+}
+
+.weather-header .weather-search input {
+    height: 100%;
+    flex-grow: 1;
+    padding-left: 2.5rem;
+    padding-right: 0.5rem;
+    font-size: 1.2rem;
+    border: 0;
+    background-color: rgb(230, 233, 234, 0.4);
+    border-radius: 0.4rem;
+}
+
+.weather hr {
+    width: 100%;
+    opacity: 0.15;
+}
+
+.weather .weather-today {
+    padding: 1.5rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-today .weather-today-caption {
+    padding-bottom: 0.5rem;
+}
+
+.weather-today .weather-today-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.weather-today-row .weather-today-box {
+    width: 50%;
+    background-color: rgb(230, 233, 234, 0.3);
+    border-radius: 0.4rem;
+    margin-bottom: 0.5rem;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+}
+
+.weather-today-box-description .weather-today-box-caption {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    padding-bottom: 0.4rem;
+}
+
+.weather-today-box-description .weather-today-box-value {
+    font-size: 1.6rem;
+    font-weight: 550;
+}
+
+.weather-header .weather-search input:focus {
+    outline: none;
+}
+
+.weather-header .weather-change-degrees {
+
+    background-color: rgb(230, 233, 234, 0.4);
+    height: 100%;
+    padding: 0.1rem 0;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4rem;
+    user-select: none;
+
+}
+
+.weather .weather-next-days {
+    display: flex;
+    flex-direction: column;
+    padding: 0.4rem 1.4rem;
+}
+
+.weather-next-days .weather-next-caption {
+    padding-bottom: 0.5rem;
+}
+
+.weather-next-days .weather-next-box {
+    flex-grow: 1;
+    background-color: rgb(230, 233, 234, 0.3);
+    border-radius: 0.4rem;
+    margin-bottom: 0.5rem;
+    padding: 0.8rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather .footer {
+    position: absolute;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.4rem 0rem;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
