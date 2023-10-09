@@ -2,8 +2,11 @@
 import format from "date-fns/format";
 import fetchWeather from "./weatherManager";
 
+import WarnIcon from '../images/alert-triangle.svg';
+
 let farenheit = false;
 let location = "Madrid";
+let errorBox = null;
 
 const _clickHandler = (event) => {
     const currentEvent = event;
@@ -274,12 +277,40 @@ const _loadLayoutFromData = (weatherData) => {
     
 }
 
+
+
+const _notifyInvalidLocation = () => {
+    // Notify invalid location
+    const weatherSearch = document.querySelector('.weather-search');
+    errorBox = document.createElement("div");
+    errorBox.classList.add("weather-error");
+
+    const errorImage = document.createElement("div");
+    const imageIcon = new Image();
+    imageIcon.src = WarnIcon;
+    errorImage.appendChild(imageIcon);
+    errorBox.appendChild(errorImage);
+
+    const errorDesc = document.createElement("div");
+    errorDesc.innerHTML = 'Location not found.<br /> Search format must be a valid "City", "City, State", or "City, Country".'
+    errorBox.appendChild(errorDesc);
+
+    weatherSearch.appendChild(errorBox);
+}
+
 const updateLayout = () =>
 {
+    if(errorBox !== null)
+    {
+        errorBox.remove();
+        errorBox = null;
+    }
+
     fetchWeather(location).then((weatherData) => {
         if(weatherData.error)
         {
             // Notify invalid location
+            _notifyInvalidLocation();
         } else {            
             _loadLayoutFromData(weatherData);
         }
@@ -305,10 +336,22 @@ const _inputHandler = (event) => {
 
 const generateLayout = () =>
 {
+    if(errorBox !== null)
+    {
+        errorBox.remove();
+        errorBox = null;
+    }
+
+    if(errorBox !== null)
+    {
+        errorBox.remove();
+        errorBox = null;
+    }
+
     fetchWeather(location).then((weatherData) => {
         if(weatherData.error)
         {
-            // Notify invalid location
+            _notifyInvalidLocation();            
         } else {
             // location
             _loadLayoutFromData(weatherData);

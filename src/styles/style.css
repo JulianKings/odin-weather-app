@@ -185,6 +185,48 @@ body {
     display: flex;
 }
 
+.weather-search .weather-error {
+    background-color: black;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    color: white;
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    z-index: 2;
+    animation: showUp 0.8s ease;
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tooltip arrow */
+.weather-search .weather-error::after {
+    content: "";
+    position: absolute;
+    top: -0.9rem;
+    left: 3rem;
+    border-width: 0.6rem;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+
+.weather-search .weather-error img {
+    margin-right: 0.55rem;
+
+}
+
 .weather-header .weather-search-image {
     position: absolute;
     top: 0;
